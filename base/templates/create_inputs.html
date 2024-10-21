@@ -1,0 +1,28 @@
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+<link rel="stylesheet" href="{% static 'css2/bootstrap.css' %}">
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+<br>
+<div class="container">
+
+    <form method="post">
+        {% csrf_token %}
+        {% for field in input_fields %}
+
+            <label>{{ field.label }}</label>
+            <input class="form-control" type="text" name="{{ field.name }}"><br>
+        {% endfor %}
+        <br>
+        <input type="text" name="name" placeholder="enter name">
+        <input type="text" name="message" placeholder="enter message">
+        <button type="submit">Submit</button>
+    </form>
+
+</div>

@@ -1,0 +1,78 @@
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.sidebar ul li a:hover {
+    color: #23527c;
+}
+
+
+
+/* -------------- */
+
+
+
+.form-label{
+    color: gray;
+    font-weight:700;
+}
+
+.form-control{
+    border-color: transparent;
+    border-bottom-color: gray;
+    border-radius: 0%;
+    color: gray;
+    /* background-color: transparent; */
+    
+}
+
+.form-input{
+    border-color: transparent;
+    border-bottom-color: gray;
+    border-radius: 0%;
+    color: gray;
+    background-color: transparent;
+
+}
+
+.signup-text{
+    /* margin-left: 45%; */
+    text-decoration: none;
+}
+
+
+
+.description-box{
+    height: 100px;
+    /* background-color: aqua; */
+}
+
+.login-btn{
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+
+
+}

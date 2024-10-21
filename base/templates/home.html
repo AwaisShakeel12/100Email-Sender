@@ -1,0 +1,87 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+
+
+    <link rel="stylesheet" href="{% static 'css2/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            {% include 'main.html' %} 
+    
+          
+            <div class="col-md-9">
+         
+                <div id="box2" >
+
+                    <h1>Welcome To AS Email Pro. </h1>
+                    <h2>Send 100+ email in 1 Min. </h2>
+                    <h4>By Awais Shakeel</h4>
+                  
+                </div>
+
+
+                  <br><br>
+
+                <div class="card" style="width: 100%;">
+                    <img src="{% static 'image/register.png'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Register Your Account By Provding Your Email, Username, Email-app-password. Note Its not your email password. its your emai app password. https://myaccount.google.com/apppasswords  go to this url create an app and enter your app password in field.</p>
+                    </div>
+                  </div>
+                  <br><br>
+                  <div class="card" style="width: 100%;">
+                    <img src="{% static 'image/open_manual.png'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Go to manual  enter number of email you want to send.</p>
+                    </div>
+                  </div>
+                  <br><br>
+
+                  <div class="card" style="width: 100%;">
+                    <img src="{% static 'image/add_manual.png'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Write Emails to which user you want to send. Enter Subject, Message</p>
+                    </div>
+                  </div>
+                  <br><br>
+
+                  <div class="card" style="width: 100%;">
+                    <img src="{% static 'image/csv.png'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Go to Send with Csv or Excel. Provide your file location  like this ( C:\\Users\Awais Shakeel\\Desktop\\newdata.csv ) Make sure you enter \\ slash. Enter the column name in which your email exsits. Write subject and Message. </p>
+                    </div>
+                  </div>
+
+
+
+       
+
+
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

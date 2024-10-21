@@ -1,0 +1,76 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+
+
+    <link rel="stylesheet" href="{% static 'css2/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            {% include 'main.html' %} 
+    
+          
+            <div class="col-md-9">
+         
+                <div id="box2" >
+                    <h2>Send With CSV</h2>
+
+                    <form method="post" action="" enctype="multipart/form-data" >
+                        {% csrf_token %}
+                        <label class="form-label ">Enter Csv File Address</label>
+                        <input required class="form-control form-input" type="text" name="address" placeholder="enter your cv address/url" >
+                        <br><br>
+                        <label class="form-label ">Enter Email Column Name</label>
+                        <input required class="form-control form-input" type="text" name="column" placeholder="enter the name of email column">
+                        <br>
+                        <br>
+                        <label class="form-label ">Enter Subject</label>
+                        <input required class="form-control form-input" type="text" name="name" placeholder="subject of email" id="">
+                        <br><br>
+                        <label class="form-label ">Enter Message</label>
+                        <textarea required class="form-control form-input" name="message" id="editor" ></textarea>
+                        <br><br>
+                        <label class="form-label ">Enter Subject</label>
+                        <input  class="form-control form-input" type="file" name="attachment" >
+                        <br><br>
+                        <input class="btn btn-primary" type="submit" value="submit">
+            
+                    </form>
+                   
+                  
+                </div>
+
+
+       
+
+
+
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
+
+</body>
+
+</html>

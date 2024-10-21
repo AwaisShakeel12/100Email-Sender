@@ -1,0 +1,82 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css2/bootstrap.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+
+    <style>
+        
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  background-color: white;
+  margin-top: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+          
+    color:blueviolet;
+    background-color: white;
+            
+    font-size: 20px;
+    /* font-weight: bold; */
+
+}
+
+    </style>
+
+</head>
+<body>
+
+            <div class="col-md-3 sidebar">
+
+                <li style="list-style: none; margin-bottom: 20px;">
+                    <a href="{% url 'home' %}">
+                        <img height="60" width="60" src="{% static 'image/logo3.png'%}" alt="">
+                    </a>
+                </li>
+                <ul>
+                    <li><a href="{% url 'get_number' %}" id="box1-link">Manually</a></li>
+                    <li><a href="{% url 'withcsv'  %}" id="box2-link">Send with CSV</a></li>
+                    <li><a href="{% url 'withexcel' %}">Send with EXCEL</a></li>
+                    <li><a href="{% url 'register' %}" id="box4-link">Register</a></li>
+                    {% if request.user.is_authenticated %}
+                    <li> <a  href="{% url 'logout' %}">Logout</a></li>
+                     
+                    {% else %}
+                      <li><a href="{% url 'login' %}" id="box5-link">Login</a></li>
+                     
+                    {% endif %}
+                  
+                 
+                </ul>
+            </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+
+</html>

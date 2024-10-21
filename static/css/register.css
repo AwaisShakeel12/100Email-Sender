@@ -1,0 +1,63 @@
+body{
+    background-color: aliceblue;
+    background-image: url(../images/bg-01.jpg);
+}
+
+
+.main-container{
+    width: 40%;
+    background-color: white;
+    
+    border-radius: 15px;
+}
+
+.text-center{
+    color: blueviolet;
+    font-weight: bold;
+    /* font-family: ; */
+}
+
+.error-msg{
+    height: 10vh;
+    text-align: center;
+    color: red;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    /* background-color: rgb(16, 16, 52); */
+
+}
+
+.form-label{
+    color: gray;
+    font-weight:700;
+}
+
+.form-control{
+    border-color: transparent;
+    border-bottom-color: gray;
+    border-radius: 0%;
+    color: gray;
+    
+}
+
+.signup-text{
+    /* margin-left: 45%; */
+    text-decoration: none;
+}
+
+.login-btn{
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+
+
+}

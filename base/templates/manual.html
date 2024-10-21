@@ -1,0 +1,45 @@
+{% load static %}
+
+
+<div class="container">
+
+  <h2>Manual Send</h2>
+  <p>Types number of email you want to send</p>
+
+  <form action="" method="post" >
+    {% csrf_token %}
+  
+    <class='form-control'> {{form.as_p}} </>
+
+  </form>
+
+  <div class="col-md-9">
+    {% if input_fields %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% for field in input_fields %}
+          <label class="form-label ">{{ field.label }}</label>
+          <input required class="form-control form-input" type="text" name="{{ field.name }}"><br>
+      {% endfor %}
+      <label class="form-label ">Enter Subject</label>
+      <input required class="form-control form-input" type="text" name="name" placeholder="enter name">
+      <br>
+      <label class="form-label ">Enter Message</label>
+      <textarea required class="form-control form-input" name="message" id="editor" ></textarea>
+      <br>
+      <label class="form-label ">Enter Subject</label>
+      <input  class="form-control form-input" type="file" name="attachment" >
+      <br><br>
+
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    <br>
+    <a class="btn btn-primary" href="{% url 'get_number' %}">Back</a>
+    {% endif %}
+  </div>
+
+</div>
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor');
+</script>
